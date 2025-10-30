@@ -27,11 +27,11 @@ git remote remove origin 2>nul
 echo Adding remote origin...
 git remote add origin https://github.com/%username%/%reponame%.git
 
-echo Setting main branch...
-git branch -m master main
+echo Checking current branch...
+git branch
 
 echo Pushing to GitHub...
-git push -u origin main
+git push -u origin HEAD
 
 echo.
 echo Repository created and pushed successfully!
