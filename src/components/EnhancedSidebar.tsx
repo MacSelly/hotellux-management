@@ -18,7 +18,7 @@ import {
   Menu,
   X
 } from 'lucide-react';
-import { cn } from './ui/utils';
+import { cn } from '../lib/utils';
 import { useAuth } from '../contexts/AuthContext';
 import { ThemeToggle } from './ThemeToggle';
 import { useState, useEffect } from 'react';

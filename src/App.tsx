@@ -16,6 +16,7 @@ import { UserManagement } from './components/UserManagement';
 import { EnhancedRoomDashboard } from './components/EnhancedRoomDashboard';
 import { AnimationSettings } from './components/AnimationSettings';
 import { ApiStatus } from './components/ApiStatus';
+import { SimpleThemeToggle } from './components/SimpleThemeToggle';
 
 function AppContent() {
   const { isAuthenticated, user } = useAuth();
@@ -122,7 +123,8 @@ function AppContent() {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
+      <SimpleThemeToggle />
       <EnhancedSidebar activeModule={activeModule} onModuleChange={setActiveModule} />
       <main className="flex-1 flex flex-col overflow-hidden">
         {renderModule()}

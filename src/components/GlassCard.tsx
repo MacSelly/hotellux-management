@@ -8,12 +8,12 @@ interface GlassCardProps {
 }
 
 export function GlassCard({ children, className, variant = 'default' }: GlassCardProps) {
-  const baseClasses = 'backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-xl';
+  const baseClasses = 'backdrop-blur-xl shadow-xl rounded-2xl transition-all duration-200';
   
   const variantClasses = {
-    default: 'bg-white/10 dark:bg-white/5',
-    subtle: 'bg-white/5 dark:bg-white/[0.02]',
-    intense: 'bg-white/20 dark:bg-white/10'
+    default: 'bg-white/10 dark:bg-slate-800/20 border border-white/20 dark:border-slate-700/30',
+    subtle: 'bg-white/5 dark:bg-slate-800/10 border border-white/10 dark:border-slate-700/20',
+    intense: 'bg-white/20 dark:bg-slate-800/30 border border-white/30 dark:border-slate-700/40'
   };
 
   return (

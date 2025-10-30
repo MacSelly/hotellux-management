@@ -5,17 +5,54 @@
 @import '../styles (3)/globals.css';
 @import '../styles (3)/animations.css';
 
+/* Dark mode setup */
+:root {
+  --bg-primary: 248 250 252;
+  --bg-secondary: 255 255 255;
+  --text-primary: 15 23 42;
+  --text-secondary: 100 116 139;
+  --border-color: 226 232 240;
+}
+
+.dark {
+  --bg-primary: 15 23 42;
+  --bg-secondary: 30 41 59;
+  --text-primary: 248 250 252;
+  --text-secondary: 148 163 184;
+  --border-color: 51 65 85;
+}
+
 /* Glassmorphism utilities */
 @layer utilities {
   .glass-card {
-    @apply bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-xl rounded-2xl;
+    @apply bg-white/10 dark:bg-slate-800/20 backdrop-blur-xl border border-white/20 dark:border-slate-700/30 shadow-xl rounded-2xl;
   }
   
   .glass-subtle {
-    @apply bg-white/5 dark:bg-white/[0.02] backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-lg;
+    @apply bg-white/5 dark:bg-slate-800/10 backdrop-blur-xl border border-white/10 dark:border-slate-700/20 shadow-lg;
   }
   
   .glass-intense {
-    @apply bg-white/20 dark:bg-white/10 backdrop-blur-xl border border-white/30 dark:border-white/20 shadow-2xl;
+    @apply bg-white/20 dark:bg-slate-800/30 backdrop-blur-xl border border-white/30 dark:border-slate-700/40 shadow-2xl;
+  }
+
+  .bg-app {
+    @apply bg-slate-50 dark:bg-slate-900;
+  }
+
+  .bg-card {
+    @apply bg-white dark:bg-slate-800;
+  }
+
+  .text-primary {
+    @apply text-slate-900 dark:text-slate-100;
+  }
+
+  .text-secondary {
+    @apply text-slate-600 dark:text-slate-400;
+  }
+
+  .border-default {
+    @apply border-slate-200 dark:border-slate-700;
   }
 }
