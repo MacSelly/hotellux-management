@@ -17,7 +17,7 @@
 
 ## Overview
 
-HotelLux is a comprehensive hotel management system featuring:
+><HotelLux is a comprehensive hotel management system featuring:
 - **Multi-role authentication** with role-based access control (RBAC)
 - **Dual theme support** (light/dark) with smooth transitions
 - **Animated room occupancy indicators** with configurable intensity levels
