@@ -30,8 +30,8 @@ git remote add origin https://github.com/%username%/%reponame%.git
 echo Checking current branch...
 git branch
 
-echo Pushing to GitHub...
-git push -u origin HEAD
+echo Force pushing to GitHub...
+git push -u origin HEAD --force
 
 echo.
 echo Repository created and pushed successfully!
