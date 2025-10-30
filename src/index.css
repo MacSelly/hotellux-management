@@ -4,3 +4,18 @@
 
 @import '../styles (3)/globals.css';
 @import '../styles (3)/animations.css';
+
+/* Glassmorphism utilities */
+@layer utilities {
+  .glass-card {
+    @apply bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-xl rounded-2xl;
+  }
+  
+  .glass-subtle {
+    @apply bg-white/5 dark:bg-white/[0.02] backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-lg;
+  }
+  
+  .glass-intense {
+    @apply bg-white/20 dark:bg-white/10 backdrop-blur-xl border border-white/30 dark:border-white/20 shadow-2xl;
+  }
+}

@@ -41,7 +41,11 @@ function AppContent() {
   const renderModule = () => {
     switch (activeModule) {
       case 'dashboard':
-        return <Dashboard />;
+        return (
+          <div className="flex-1 overflow-auto">
+            <Dashboard />
+          </div>
+        );
       case 'guest-portal':
         return (
           <div className="flex-1 p-8 overflow-auto">
@@ -49,9 +53,17 @@ function AppContent() {
           </div>
         );
       case 'reservations':
-        return <Reservations />;
+        return (
+          <div className="flex-1 overflow-auto">
+            <Reservations />
+          </div>
+        );
       case 'frontdesk':
-        return <FrontDesk />;
+        return (
+          <div className="flex-1 overflow-auto">
+            <FrontDesk />
+          </div>
+        );
       case 'rooms':
         return (
           <div className="flex-1 p-8 overflow-auto">
@@ -83,9 +95,17 @@ function AppContent() {
           </div>
         );
       case 'financial':
-        return <Financial />;
+        return (
+          <div className="flex-1 overflow-auto">
+            <Financial />
+          </div>
+        );
       case 'ai':
-        return <AIInsights />;
+        return (
+          <div className="flex-1 overflow-auto">
+            <AIInsights />
+          </div>
+        );
       case 'users':
         return (
           <div className="flex-1 p-8 overflow-auto">
@@ -93,16 +113,20 @@ function AppContent() {
           </div>
         );
       default:
-        return <Dashboard />;
+        return (
+          <div className="flex-1 overflow-auto">
+            <Dashboard />
+          </div>
+        );
     }
   };
 
   return (
     <div className="flex h-screen overflow-hidden">
       <EnhancedSidebar activeModule={activeModule} onModuleChange={setActiveModule} />
-      <div className="flex-1 overflow-hidden">
+      <main className="flex-1 flex flex-col overflow-hidden">
         {renderModule()}
-      </div>
+      </main>
     </div>
   );
 }
